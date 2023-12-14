@@ -11,7 +11,7 @@
 	let currentYear = new Date().getFullYear();
   	let siteName = "Gwenaelle Lepeltier";
 	let open = false;
-	let isColorful;
+	let isColorful = false;
 
 	$: { isColorful = $page.data.page.data.color;}
 	
