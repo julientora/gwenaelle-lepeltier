@@ -11,13 +11,11 @@
 	let currentYear = new Date().getFullYear();
   	let siteName = "Gwenaelle Lepeltier";
 	let open = false;
-	// let color = $page.data.color;
+	let isColorful;
+
+	$: { isColorful = $page.data.page.data.color;}
 	
 	export let data;
-	
-	console.log(data.document[0].data.color);
-	// console.log($page.data);
-	
 
 </script>
 
@@ -36,19 +34,19 @@
 </svelte:head>
 
 <header class="sticky top-0 z-10 grid w-full px-5 py-4 bg-white md:mx-auto max-2xl:border-b max-w-screen-2xl md:flex md:items-center md:justify-between md:px-20">
-		<!-- {#if $page.data.color === true} -->
+		{#if isColorful}
 		<a href="/">
 			<img src="/svg/logo-v2.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
 		</a>
 		<!-- Display burger-button on mobile -->
 			<Hamburger bind:open />
-		<!-- {:else if $page.data.page.data.color === false} -->
+		{:else if !isColorful}
 		<a href="/">
 			<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
 		</a>
 		<!-- Display burger-button on mobile -->
 		<Hamburger bind:open />
-		<!-- {/if} -->
+		{/if}
 		<!-- Display on desktop only -->
 		<nav class="desktop-nav">
 			<Nav links={data.nav.data.links} />
@@ -66,15 +64,15 @@
 
 <section>
 	<footer class="flex flex-col items-center px-5 py-5 mt-20 shadow-inner md:mx-auto md:px-24">
-			<!-- {#if $page.data.page.data.color === true} -->
+		{#if isColorful}
 			<a href="/" class="mt-10 mb-3">
-				<img src="/svg/logo-v3.svg" alt="logo" class="w-96 md:w-72">
+				<img src="/svg/logo-v2.svg" alt="logo" class="w-96 md:w-72">
 			</a>
-		<!-- {:else if $page.data.page.data.color === false} -->
+		{:else if !isColorful}
 		<a href="/" class="mt-10 mb-3">
 			<img src="/svg/logo-v1.svg" alt="logo" class="w-96 md:w-72">
 		</a>
-		<!-- {/if} -->
+		{/if}
 
 		<div class="flex justify-between w-full md:gap-6 md:justify-center">
 			<div class="footer-nav">
