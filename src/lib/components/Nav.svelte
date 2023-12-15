@@ -3,6 +3,8 @@
 	import { fly } from 'svelte/transition';
 
 	/** @type {import('../../prismicio-types').NavDocumentData['links']} */
+
+
 	export let links;
 </script>
 
@@ -54,7 +56,20 @@
 			justify-content: center;
 			align-items: center;
 		}
-		li :global(a::after) {
+
+		li :global(a.active) {
+		/* Add your styles here */
+		color: red; /* Example: change the color to red */
+		font-weight: bold; /* Example: make the text bold */
+		}
+
+		li :global(a.active::after) {
+			width: 100%;
+			bottom: -6px;
+			top: -5px;
+		}
+
+		/* li :global(a::after) {
 		content: "";
 		position: absolute;
 		left: 50%;
@@ -63,7 +78,7 @@
 		width: 4rem;
 		transition: top .2s ease-in, bottom .2s ease-in;
 		border-bottom: 1.5px solid black;
-		}
+		} */
 	}
 
 	/* styling specific for footer navigation */
