@@ -48,8 +48,7 @@
 		<Nav links={data.nav.data.links} />
 		{/if}
   </header>
-
-<svelte:window on:scroll={() => open = false} />
+	
 <main class="mx-5 md:mx-auto max-w-screen-2xl" on:click={() => open = false}>
 	<slot />
 </main>
