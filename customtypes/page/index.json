@@ -22,6 +22,15 @@
 					"single": "heading1"
 				}
 			},
+			"color": {
+				"type": "Boolean",
+				"config": {
+					"label": "Color",
+					"placeholder_false": "non",
+					"placeholder_true": "oui",
+					"default_value": false
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",

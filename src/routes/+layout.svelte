@@ -11,8 +11,12 @@
 	let currentYear = new Date().getFullYear();
   	let siteName = "Gwenaelle Lepeltier";
 	let open = false;
+	let isColorful = false;
 
+	$: { isColorful = $page.data.page.data.color;}
+	
 	export let data;
+
 </script>
 
 <svelte:head>
@@ -31,12 +35,10 @@
 
 <header class="sticky top-0 z-10 grid w-full px-5 py-4 bg-white md:mx-auto max-2xl:border-b max-w-screen-2xl md:flex md:items-center md:justify-between md:px-20">
 		<a href="/">
-			<img src="/svg/logo-v1.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
+			<img src="/svg/logo-{data.page.data.color === true ? 'v2' : 'v1'}.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
 		</a>
 		<!-- Display burger-button on mobile -->
-		<button class="md:hidden">
 			<Hamburger bind:open />
-		</button>
 		<!-- Display on desktop only -->
 		<nav class="desktop-nav">
 			<Nav links={data.nav.data.links} />
@@ -54,15 +56,16 @@
 
 <section>
 	<footer class="flex flex-col items-center px-5 py-5 mt-20 shadow-inner md:mx-auto md:px-24">
-		<a href="/" class="mt-10 mb-3">
-			<img src="/svg/logo-v3.svg" alt="logo" class="w-96 md:w-72">
-		</a>
+			<a href="/" class="mt-10 mb-3">
+				<img src="/svg/logo-{data.page.data.color === true ? 'v2' : 'v1'}.svg" class="w-48 md:w-60 lg:w-72" alt="logo-header">
+			</a>
+
 		<div class="flex justify-between w-full md:gap-6 md:justify-center">
 			<div class="footer-nav">
 				<Nav links={data.nav.data.links} />
 			</div>
         <div class="mb-8 text-right infos-contact">
-	        <a href="https://www.google.com/maps/search/?api=1&query={data.settings.data.googlemap}" target="_blank" class="mb-1 hover:underline"><PrismicRichText field={data.settings.data.adress} /></a>
+	        <a href="https://www.google.com/maps/search/?api=1&query={data.settings.data.googlemap}" target="_blank" class="mb-1"><PrismicRichText field={data.settings.data.adress} /></a>
 			<a href="tel:{data.settings.data.telephone}" class="block telephone hover:underline">{data.settings.data.telephone}</a>
         </div>
     </div>
@@ -79,6 +82,12 @@
 		top: 0;
 		right: .9rem;
 		z-index: 100;
+	}
+
+	@media (min-width: 768px) {
+		:global(.hamburger) {
+			visibility: hidden;
+		}
 	}
 	
 	:global(.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after) {
