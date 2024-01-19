@@ -5,11 +5,11 @@ import type * as prismic from '@prismicio/client';
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
- * Item in *Nav → Links*
+ * Item in *Menu Principal → Links*
  */
 export interface NavDocumentDataLinksItem {
 	/**
-	 * Link field in *Nav → Links*
+	 * Link field in *Menu Principal → Links*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
@@ -19,7 +19,7 @@ export interface NavDocumentDataLinksItem {
 	link: prismic.LinkField;
 
 	/**
-	 * Label field in *Nav → Links*
+	 * Label field in *Menu Principal → Links*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -30,11 +30,11 @@ export interface NavDocumentDataLinksItem {
 }
 
 /**
- * Content for Nav documents
+ * Content for Menu Principal documents
  */
 interface NavDocumentData {
 	/**
-	 * Links field in *Nav*
+	 * Links field in *Menu Principal*
 	 *
 	 * - **Field Type**: Group
 	 * - **Placeholder**: *None*
@@ -46,7 +46,7 @@ interface NavDocumentData {
 }
 
 /**
- * Nav document from Prismic
+ * Menu Principal document from Prismic
  *
  * - **API ID**: `nav`
  * - **Repeatable**: `false`
@@ -152,11 +152,11 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 >;
 
 /**
- * Content for Settings documents
+ * Content for Infos de contact documents
  */
 interface SettingsDocumentData {
 	/**
-	 * E-mail field in *Settings*
+	 * E-mail field in *Infos de contact*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -167,7 +167,7 @@ interface SettingsDocumentData {
 	email: prismic.KeyTextField;
 
 	/**
-	 * Téléphone field in *Settings*
+	 * Téléphone field in *Infos de contact*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -178,7 +178,7 @@ interface SettingsDocumentData {
 	telephone: prismic.KeyTextField;
 
 	/**
-	 * Adress field in *Settings*
+	 * Adress field in *Infos de contact*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
@@ -189,7 +189,7 @@ interface SettingsDocumentData {
 	adress: prismic.RichTextField;
 
 	/**
-	 * GoogleMap field in *Settings*
+	 * GoogleMap field in *Infos de contact*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -198,7 +198,7 @@ interface SettingsDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	googlemap: prismic.KeyTextField /**
-	 * Logo Header field in *Settings*
+	 * Logo Header field in *Infos de contact*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -209,7 +209,7 @@ interface SettingsDocumentData {
 	logo_header: prismic.ImageField<never>;
 
 	/**
-	 * Logo Footer field in *Settings*
+	 * Logo Footer field in *Infos de contact*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -220,7 +220,7 @@ interface SettingsDocumentData {
 	logo_footer: prismic.ImageField<never>;
 
 	/**
-	 * Logo Hero field in *Settings*
+	 * Logo Hero field in *Infos de contact*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -232,7 +232,7 @@ interface SettingsDocumentData {
 }
 
 /**
- * Settings document from Prismic
+ * Infos de contact document from Prismic
  *
  * - **API ID**: `settings`
  * - **Repeatable**: `false`

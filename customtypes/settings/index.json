@@ -1,6 +1,6 @@
 {
 	"id": "settings",
-	"label": "Settings",
+	"label": "Infos de contact",
 	"format": "custom",
 	"repeatable": false,
 	"status": true,

@@ -1,6 +1,6 @@
 {
 	"id": "nav",
-	"label": "Nav",
+	"label": "Menu Principal",
 	"format": "custom",
 	"repeatable": false,
 	"status": true,
