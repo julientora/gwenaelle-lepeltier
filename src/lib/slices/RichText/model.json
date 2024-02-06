@@ -90,6 +90,29 @@
       },
       "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "calendrier",
+      "name": "Calendrier",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "RichText",
+      "primary": {
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "Lorem ipsum...",
+            "allowTargetBlank": false,
+            "multi": "preformatted",
+            "labels": [
+              "codespan"
+            ]
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }
