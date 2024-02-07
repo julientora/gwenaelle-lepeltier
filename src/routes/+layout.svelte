@@ -122,10 +122,10 @@
 	}
 
 	:global(.iew-portal-lnk) {
-		color: black;
+		color: black !important;
 	}
 	
 	:global(.iew-aw-availability-summary-item-hour:not(.isBusy)) {
-		color: black;
+		color: black !important;
 	}
 </style>
