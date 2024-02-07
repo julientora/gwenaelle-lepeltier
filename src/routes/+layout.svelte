@@ -13,6 +13,12 @@
 	let open = false;
 	let isColorful = false;
 
+	let currentPageUid;
+
+    $: {
+        currentPageUid = $page.params.uid;
+    }
+
 	$: { isColorful = $page.data.page.data.color;}
 	
 	export let data;
@@ -52,7 +58,14 @@
 <main class="mx-5 md:mx-auto max-w-screen-2xl" on:click={() => open = false}>
 	<slot />
 </main>
+
 <PrismicPreview {repositoryName} />
+
+	{#if currentPageUid === 'prendre-rendez-vous'}
+<div id="ie_dynamic_widget" data-base-color=""> <script type="text/javascript" src="https://www.psychologue.net/widget/company_schedule?com=423784&h=7e9aa9d91ed677e654972e30b9c5c62a&v=10&utm_source=423784&utm_medium=widget&utm_campaign=widget-company_schedule"></script> </div>
+	{/if}
+
+
 
 <section>
 	<footer class="flex flex-col items-center px-5 py-5 mt-20 shadow-inner md:mx-auto md:px-24">
