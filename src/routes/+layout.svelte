@@ -120,13 +120,5 @@
 			display: none;
 		}
 	}
-	:global(
-		.iew-portal-lnk,
-		.iew-aw-availability-summary-item-hour,
-		.iew-aw-availability-nav span,
-		.iew-btn,
-		.iew-form-summary,
-		) {
-			color: black !important;
-	}
+	
 </style>
