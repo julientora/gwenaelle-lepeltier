@@ -62,7 +62,7 @@
 <PrismicPreview {repositoryName} />
 
 	{#if currentPageUid === 'prendre-rendez-vous'}
-		<div id="ie_dynamic_widget" data-base-color="" class="mx-5 md:mx-auto max-w-screen-2xl">
+		<div id="ie_dynamic_widget" data-base-color="" class="flex items-center justify-center">
 			<script type="text/javascript" src="https://www.psychologue.net/widget/company_schedule?com=423784&h=7e9aa9d91ed677e654972e30b9c5c62a&v=10&utm_source=423784&utm_medium=widget&utm_campaign=widget-company_schedule"></script>
 		</div>
 	{/if}
@@ -121,8 +121,11 @@
 		}
 	}
 
-	.iew-portal-lnk {
-		color: black
+	:global(.iew-portal-lnk) {
+		color: black;
 	}
 	
+	:global(.iew-aw-availability-summary-item-hour:not(.isBusy)) {
+		color: black;
+	}
 </style>
