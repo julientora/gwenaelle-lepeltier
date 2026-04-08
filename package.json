@@ -15,7 +15,7 @@
 	},
 	"devDependencies": {
 		"@slicemachine/adapter-sveltekit": "^0.3.32",
-		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/adapter-auto": "^2.1.1",
 		"@sveltejs/kit": "^1.27.1",
 		"autoprefixer": "^10.4.16",
 		"concurrently": "^8.2.2",
@@ -36,7 +36,7 @@
 	},
 	"type": "module",
 	"engines": {
-		"node": "22.x"
+		"node": "24.x"
 	},
 	"dependencies": {
 		"@prismicio/client": "^7.3.1",
