@@ -1,2 +1,15 @@
+# Interdire aux robots IA d'OpenAI
+User-agent: GPTBot
+Disallow: /
+
+# Interdire à Gemini (Google)
+User-agent: Google-Extended
+Disallow: /
+
+# Règle générale supplémentaire (Common Crawl, utilisé par Claude/Anthropic)
+User-agent: CCBot
+Disallow: /
+
+# Interdire l'accès aux images pour tous les robots
 User-agent: *
-Allow: /
+Disallow: /images/
